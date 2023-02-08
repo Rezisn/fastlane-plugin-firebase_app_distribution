@@ -82,6 +82,8 @@ module Fastlane
         if upload_status_response.binary_download_uri
           UI.message("🔗 Download the release binary (link expires in 1 hour): #{upload_status_response.binary_download_uri}")
         end
+
+        return upload_status_response
       end
 
       def self.description
